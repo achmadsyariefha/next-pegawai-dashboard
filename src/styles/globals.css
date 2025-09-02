@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+/* @layer base {
+  .theme-light {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+
+  .theme-dark {
+    --background: #0a0a0a;
+    --foreground: #dedede;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-geis-sans,Arial, Helvetica, sans-serif);
+  }
+} */
+
+:root {
+  --background: #f9fafb;
+  --foreground: #1f2937;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1f2937;
+  --color-brand: #2563eb;
+  --color-brand-foreground: #ffffff;
+  --muted: #f3f4f6; /* light gray for subtle backgrounds */
+  --muted-foreground: #4b5563; /* slate text for secondary content */
+  --muted-hover: #e5e7eb; /* slightly darker for hover effect */
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #f3f4f6;
+  --sidebar: #1e293b;
+  --sidebar-foreground: #f9fafb;
+  --color-brand: #60a5fa;
+  --color-brand-foreground: #1e3a8a;
+  --muted: #1f2937; /* dark slate for muted backgrounds */
+  --muted-foreground: #d1d5db; /* light gray for readable muted text */
+  --muted-hover: #374151; /* hover shade in dark mode */
+}
