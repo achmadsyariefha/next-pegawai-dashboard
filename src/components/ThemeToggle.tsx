@@ -3,14 +3,14 @@
 import { useTheme } from "@/context/theme-context";
 
 export default function ThemeToggle() {
-    const { theme, toggleTheme } = useTheme();
+    const { toggleTheme } = useTheme();
 
     return (
         <button
             onClick={toggleTheme}
-            className="p-2 px-4 rounded border border-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
+            className="absolute top-4 right-4 px-2 py-1 border rounded"
         >
-            Switch to {theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"} Mode
+            Toggle Theme
         </button>
     );
 }
