@@ -1,11 +1,13 @@
 'use client';
 import { useEffect, useState } from "react";
-import Papa from "papaparse";
+import Papa, {ParseResult} from "papaparse";
 import CSVTable from "@/components/CSVTable";
 import DashboardLayout from "@/components/DashboardLayout";
 
+type CSVRow = Record<string, string>;
+
 export default function CSVPage() {
-    const [data, setData] = useState<any[]>([]);
+    const [data, setData] = useState<CSVRow[]>([]);
     const [fields, setFields] = useState<string[]>([]);
     const [loading, setLoading] = useState(true);
 
@@ -17,7 +19,7 @@ export default function CSVPage() {
                     header: true,
                     dynamicTyping: true,
                     skipEmptyLines: true,
-                    complete: (results) => {
+                    complete: (results: ParseResult<CSVRow>) => {
                         setData(results.data);
                         setFields(results.meta.fields || []);
                         setLoading(false);

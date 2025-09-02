@@ -1,11 +1,13 @@
 'use client';
-type CSVTableProps = {
-    data: any[];
+type CSVRow = Record<string, string>;
+
+interface CSVTableProps {
+    data: CSVRow[];
     fields: string[];
 };
 
 export default function CSVTable({ data, fields }: CSVTableProps) {
-    if (!data.length || !fields.length) {
+    if (!data.length) {
         return <p className="text-gray-500">No data available</p>;
     }
 
@@ -37,7 +39,7 @@ export default function CSVTable({ data, fields }: CSVTableProps) {
                                             !row[field] ? "bg-red-100 text-red-700" : ""
                                         }`}
                                     >
-                                        {row[field] || "-"}
+                                        {row[field] ?? "-"}
                                     </td>
                                 ))}
                             </tr>
