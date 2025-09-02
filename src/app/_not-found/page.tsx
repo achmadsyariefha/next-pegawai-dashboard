@@ -1,6 +1,8 @@
 // app/_not-found/page.tsx
 'use client';
 
+export const dynamic = 'force-dynamic';
+
 import Link from 'next/link';
 import DashboardLayout from '@/components/DashboardLayout';
 
